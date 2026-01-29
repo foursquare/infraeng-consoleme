@@ -27,7 +27,9 @@ pipeline {
                 }
             }
             steps {
-                sh "python -c \"print('hello')\""
+                container('python') {
+                    sh "python -c \"print('hello')\""
+                }
             }
         }
     }
