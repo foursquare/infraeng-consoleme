@@ -11,7 +11,7 @@ pipeline {
                 }
             }
             steps {
-                docker_build name: 'infraeng-consoleme'
+                docker_buildkit name: 'infraeng-consoleme', platform: 'multiarch'
             }
         }
         stage ('Deploy-dev') {
